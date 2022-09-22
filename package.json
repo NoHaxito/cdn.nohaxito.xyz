@@ -1,0 +1,24 @@
+{
+  "name": "cdn.nohaxito.xyz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoHaxito/cdn.nohaxito.xyz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoHaxito/cdn.nohaxito.xyz/issues"
+  },
+  "homepage": "https://github.com/NoHaxito/cdn.nohaxito.xyz#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
