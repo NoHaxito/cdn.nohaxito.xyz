@@ -7,10 +7,7 @@ export default function AppHeader() {
     <>
       <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-slate-900">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <a
-            href="https://flowbite.com/"
-            className="flex items-center select-none"
-          >
+          <a href="/" className="flex items-center select-none">
             <img
               src="/icon.png"
               className="mr-3 h-10 sm:h-12 dark:contrast-50"
@@ -23,7 +20,7 @@ export default function AppHeader() {
           <div className="flex md:order-2 select-none">
             <button
               type="button"
-              className="flex text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="flex text-white bg-blue-700 hover:border-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               <BiLogIn className="h-5 w-5 mr-2" />
               Login
