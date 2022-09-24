@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { BiBookAlt, BiHome, BiLogIn, BiMoney, BiSupport } from "react-icons/bi";
+import { FaBars, FaTimes } from "react-icons/fa/index";
+import { BiBookAlt, BiHome, BiLogIn, BiMoney, BiSupport } from "react-icons/bi/index";
 import ThemeToggle from "../ThemeToggle";
 export default function AppHeader() {
   const [open, setOpen] = useState(false);

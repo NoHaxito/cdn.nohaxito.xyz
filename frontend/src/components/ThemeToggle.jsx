@@ -1,4 +1,4 @@
-import { BiMoon, BiSun } from "react-icons/bi";
+import { BiMoon, BiSun } from "react-icons/bi/index";
 
 export default function ThemeToggle() {
   const onClick = () => {
