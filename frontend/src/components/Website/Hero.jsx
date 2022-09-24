@@ -1,163 +1,76 @@
-import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { BiBookAlt, BiHome, BiLogIn, BiMoney, BiSupport } from "react-icons/bi";
-export default function AppHeader() {
-  const [open, setOpen] = useState(false);
+import { BiRightArrow } from "react-icons/bi";
+
+export default function Hero() {
   return (
     <>
-      <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-slate-900">
-        <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="/" className="flex items-center select-none">
-            <img
-              src="/icon.png"
-              className="mr-3 h-10 sm:h-12 dark:contrast-50"
-              alt="Logo"
-            />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Uploader.io
-            </span>
-          </a>
-          <div className="flex md:order-2 select-none">
-            <button
-              type="button"
-              className="flex text-white bg-blue-700 hover:border-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              <BiLogIn className="h-5 w-5 mr-2" />
-              Login
-            </button>
-            <button
-              type="button"
-              onClick={() => setOpen(!open)}
-              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden dark:text-gray-400"
-            >
-              <span className="sr-only">Open main menu</span>
-              <FaBars className={`${open ? "hidden" : "h-6 w-6"}`} />
-              <FaTimes
-                className={`${
-                  open ? "hover:animate-bounce h-6 w-6" : "hidden"
-                }`}
-              />
-            </button>
-          </div>
-          <div
-            className={`${
-              open
-                ? "w-full md:block md:w-auto"
-                : "hidden w-full md:block md:w-auto"
-            }`}
-            id="navbar-default"
-          >
-            <ul className="flex flex-col items-center p-2 mt-2 sm:space-y-2 md:space-y-0  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-              <a
-                href="#"
-                className="flex py-2 pr-4 pl-3 text-gray-700 rounded  md:border-0 md:p-0 dark:text-white dark:hover:text-gray-400"
-              >
-                <BiHome className="mr-1 sm:h-6 md:h-5" />
-                Home
-              </a>
-              <a
-                href="#"
-                className="flex py-2 pr-4 pl-3 text-gray-700 rounded  md:border-0 md:p-0 dark:text-white dark:hover:text-gray-400"
-              >
-                <BiMoney className="mr-1 sm:h-6 md:h-5" />
-                Pricing
-              </a>
-              <a
-                href="#"
-                className="flex py-2 pr-4 pl-3 text-gray-700 rounded  md:border-0 md:p-0 dark:text-white dark:hover:text-gray-400"
-              >
-                <BiBookAlt className="mr-1 sm:h-6 md:h-5" />
-                Docs
-              </a>
-              <a
-                href="#"
-                className="flex py-2 pr-4 pl-3 text-gray-700 rounded  md:border-0 md:p-0 dark:text-white dark:hover:text-gray-400"
-              >
-                <BiSupport className="mr-1 sm:h-6 md:h-5" />
-                Support
-              </a>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <section class="bg-white dark:bg-slate-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+      <section className="mt-14 bg-white dark:bg-slate-900">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-18 lg:px-12">
           <a
             href="#"
-            class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
             role="alert"
           >
-            <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">
+            <span className="text-xs bg-primary-600 rounded-full text-gray-600 dark:text-white px-4 py-1.5 mr-3">
               New
             </span>{" "}
-            <span class="text-sm font-medium">
-              Flowbite is out! See what's new
-            </span>
+            <span className="text-sm font-medium">Uploader.io released!</span>
             <svg
-              class="ml-2 w-5 h-5"
+              className="ml-2 w-5 h-5"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </a>
-          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            We invest in the world’s potential
+          <h1 className=" text-center mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Low-Cost file storage in the web
           </h1>
-          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-            Here at Flowbite we focus on markets where technology, innovation,
-            and capital can unlock long-term value and drive economic growth.
+          <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+            At Uploader.io we offer a file hosting service on the web for free
           </p>
-          <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+          <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <a
               href="#"
-              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+              className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-500 dark:text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
               Learn more
               <svg
-                class="ml-2 -mr-1 w-5 h-5"
+                className="ml-2 -mr-1 w-5 h-5"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
             </a>
             <a
-              href="#"
-              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              href="/app"
+              className="select-none inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
             >
-              <svg
-                class="mr-2 -ml-1 w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
-              </svg>
-              Watch video
+              <BiRightArrow className="mr-2 -ml-1 w-5 h-5" />
+              Get started
             </a>
           </div>
-          <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
-            <span class="font-semibold text-gray-400 uppercase">
+          {/* <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+            <span className="font-semibold text-gray-400 uppercase">
               FEATURED IN
             </span>
-            <div class="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
+            <div className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
               <a
                 href="#"
-                class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+                className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
               >
                 <svg
-                  class="h-8"
+                  className="h-8"
                   viewBox="0 0 132 29"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -202,10 +115,10 @@ export default function AppHeader() {
               </a>
               <a
                 href="#"
-                class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+                className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
               >
                 <svg
-                  class="h-11"
+                  className="h-11"
                   viewBox="0 0 208 42"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -226,10 +139,10 @@ export default function AppHeader() {
               </a>
               <a
                 href="#"
-                class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+                className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
               >
                 <svg
-                  class="h-11"
+                  className="h-11"
                   viewBox="0 0 120 41"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +166,7 @@ export default function AppHeader() {
                 </svg>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
