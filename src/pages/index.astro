@@ -2,11 +2,20 @@
 import Header from "../components/Website/Header";
 import Hero from "../components/Website/Hero";
 import Features from "../components/Website/Features";
-import Main from "../layouts/Website/Main.astro";
+import CTA from "../components/Website/CTA";
+import FAQ from "../components/Website/FAQ";
+import Footer from "../components/Website/Footer";
+import WebsiteLayout from "../layouts/Website/Main.astro";
 ---
 
-<Main title="App - Index">
+<WebsiteLayout
+  title="Uploader.io"
+  description="Uploader.io is an revolutionary way to upload files in the cloud, start for free now!"
+>
   <Header client:visible />
   <Hero />
   <Features />
-</Main>
+  <FAQ client:load />
+  <CTA />
+  <Footer />
+</WebsiteLayout>
