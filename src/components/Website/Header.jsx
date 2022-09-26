@@ -25,7 +25,7 @@ export default function AppHeader() {
               Uploader.io
             </span>
           </a>
-          <div className="flex md:order-2 select-none">
+          <div className="flex space-x-2 md:order-2 select-none">
             <ThemeToggle />
             <button
               type="button"

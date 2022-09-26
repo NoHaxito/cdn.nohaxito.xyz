@@ -1,6 +1,6 @@
 import Card from "./elements/FeatureCard";
 import CardRow from "./elements/FeatureRow";
-import { FiCloud, FiLock, FiZap } from "react-icons/fi/index";
+import { FiCloud, FiLock, FiZap } from "react-icons/fi";
 export default function Features() {
   return (
     <>
