@@ -1,5 +1,5 @@
-import { Disclosure } from "../../../node_modules/@headlessui/react/dist/index.js";
-import { HiChevronUp } from "react-icons/hi";
+import { Disclosure } from "@headlessui/react";
+import { HiChevronUp } from "react-icons/hi/index.js";
 export default function FAQ() {
   const faqs = [
     {
