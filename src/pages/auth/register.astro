@@ -1,0 +1,9 @@
+---
+import AppLayout from '../../layouts/App/main.astro'
+import Header from '../../components/Auth/Header'
+import Register from '../../components/Auth/Register'
+---
+<AppLayout title="Uploader.io | Register " description="">
+<Header client:load />
+<Register client:visible />
+</AppLayout>

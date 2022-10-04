@@ -6,7 +6,7 @@ import {
   BiLogIn,
   BiMoney,
   BiSupport,
-} from "react-icons/bi/index";
+} from "react-icons/bi/index.js";
 import ThemeToggle from "../ThemeToggle";
 import HeaderLink from "./elements/HeaderLinks";
 export default function AppHeader() {
@@ -27,13 +27,13 @@ export default function AppHeader() {
           </a>
           <div className="flex space-x-2 md:order-2 select-none">
             <ThemeToggle />
-            <button
-              type="button"
-              className="flex text-white bg-blue-700 hover:border-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            <a
+              href="/auth/login"
+              className="flex items-center text-white bg-blue-700 hover:border-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               <BiLogIn className="h-5 w-5 mr-2" />
               Login
-            </button>
+            </a>
             <button
               type="button"
               onClick={() => setOpen(!open)}

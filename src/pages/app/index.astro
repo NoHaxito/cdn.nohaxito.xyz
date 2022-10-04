@@ -1,0 +1,33 @@
+---
+import NavHeader from "../../components/App/NavHeader";
+import Sidebar from "../../components/App/Sidebar";
+import AppLayout from "../../layouts/App/main.astro";
+const user = "NoHaxito";
+import loggedIn from '../../utils/isLogged'
+const session = await loggedIn()
+console.log(session)
+/*if(!session){
+  console.log(session)
+  return Astro.redirect('/auth/login');
+}*/
+---
+
+<AppLayout
+  title="Uploader.io | App"
+  description="Uploader.io is an revolutionary way to upload files in the cloud, start for free now!"
+>
+  <NavHeader client:load />
+  <div class="flex overflow-hidden pt-16">
+    <Sidebar />
+    <div
+      id="main-content"
+      class="h-full w-full p-2 bg-gray-50 dark:bg-gray-900 relative overflow-y-auto lg:ml-64"
+    >
+      <main>
+        <h1 class="dark:text-white text-2xl font-bold">
+          Welcome {user || "undefined"}
+        </h1>
+      </main>
+    </div>
+  </div>
+</AppLayout>

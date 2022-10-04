@@ -1,4 +1,4 @@
-import { BiBook, BiRightArrow } from "react-icons/bi/index";
+import { BiBook, BiRightArrow } from "react-icons/bi/index.js";
 
 export default function Hero() {
   return (

@@ -1,5 +1,5 @@
-import { Disclosure } from "@headlessui/react";
-import { HiChevronUp } from "react-icons/hi";
+import { Disclosure, Transition } from "@headlessui/react";
+import { HiChevronUp } from "react-icons/hi/index.js";
 export default function FAQ() {
   const faqs = [
     {
@@ -48,7 +48,7 @@ export default function FAQ() {
 
         <div className="flex flex-col max-w-screen-sm mx-auto">
           {faqs.map((faq) => (
-            <Disclosure key={faq.key}>
+            <Disclosure key={faq.id}>
               {({ open }) => (
                 <>
                   <Disclosure.Button className="flex justify-between text-black dark:text-gray-500 hover:text-indigo-500 dark:hover:text-gray-200 active:text-indigo-600 cursor-pointer gap-2 py-4">
@@ -61,9 +61,18 @@ export default function FAQ() {
                       } h-6 w-6`}
                     />
                   </Disclosure.Button>
+                  <Transition
+        enter="transition duration-100 ease-out"
+        enterFrom="transform scale-95 opacity-0"
+        enterTo="transform scale-100 opacity-100"
+        leave="transition duration-75 ease-out"
+        leaveFrom="transform scale-100 opacity-100"
+        leaveTo="transform scale-95 opacity-0"
+      >
                   <Disclosure.Panel className="text-gray-500 dark:text-gray-300 mb-4">
                     {faq.answer}
                   </Disclosure.Panel>
+                  </Transition>
                 </>
               )}
             </Disclosure>
